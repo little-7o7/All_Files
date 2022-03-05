@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff
+}
+
+body {
+    background-color: black;
+    height: 3000px;
+}
+
+header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    margin-right: 45px;
+    height: 32px;
+}
+
+.links {
+    margin-right: 45px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    width: 45px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.background {
+    background-color: white;
+}
+
+.menu1 {
+    height: 4px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.menu2 {
+    height: 4px;
+    width: 65%;
+    transition: .3s;
+}
+
+.menu:hover .menu2 {
+    width: 100%;
+}
+
+main {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    top: 155px;
+    left: 110px;
+}
+
+.background-img {
+    position: absolute;
+    width: 1730px;
+    z-index: 1;
+}
+
+.li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.spans {
+    height: 10px;
+    margin-right: 7px;
+}
+
+h1 {
+    font-size: 77px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+h2 {
+    margin: 33px 0;
+    font-size: 33px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.span {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.buttons {
+    margin-top: 33px;
+}
+
+.button1 {
+    background-color: #ff7d28;
+    border: none;
+    box-shadow: 0 3px 12px #ff7d28!important;
+    border-radius: 4px;
+    height: 57px;
+    min-width: 190px;
+    padding-left: 25px;
+    padding-right: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    transition: .7s;
+    margin-right: 22px;
+}
+
+.button1:hover {
+    transform: translateY(-15px);
+}
+
+.button2 {
+    background-color: transparent;
+    border: none;
+    border-radius: 4px;
+    height: 57px;
+    min-width: 190px;
+    padding-left: 25px;
+    padding-right: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    transition: .7s;
+}
+
+.button2:hover {
+    transform: translateY(-15px);
+}

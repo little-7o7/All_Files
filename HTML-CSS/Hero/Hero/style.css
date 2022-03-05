@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #d6d6d6;
+}
+
+.conteiner {
+    height: 3820px;
+    width: 810px;
+    background-color: white;
+    box-shadow: 0px 0px 40px rgb(142 142 142);
+}
+
+.header {
+    width: 810px;
+    height: auto;
+    background-color: #0A2B53;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header img {
+    width: 58%;
+}
+
+.header-spans {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-top: 70px;
+}
+
+.header-span {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 700;
+    /* letter-spacing: 4px; */
+    
+}
+
+.header-span2 {
+    color: #2EA0FF;
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 58px;
+}
+
+.logo1 img{
+    height: 180px;
+}
+
+.logo1 {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 360px;
+    right: 600px;
+}
+
+.body-text {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-top: 70px;
+    margin-right: 40px;
+}
+
+.hello {
+    font-size: 27px;
+    color: #212C53;
+    font-weight: 400;
+}
+
+.small-text {
+    margin-bottom: 50px;
+}
+
+.medium-text {
+    margin-top: 100px;
+    color: #0A2B53;
+    font-weight: 700;
+    font-size: 27px;
+}
+
+.passing {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 40px 0px 40px;
+}
+
+.passing img {
+    height: 230px;
+}
+
+.this-month {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+.tax {
+    color: #0A2B53;
+    font-weight: 500;
+    font-size: 21px;
+}
+
+.this-month a {
+    font-size: 20px;
+    margin-top: 35px;
+    color: #30A9FC;
+}
+
+.box {
+    margin: 80px 40px 0px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.help-us {
+    font-size: 27px;
+    font-weight: 600;
+    color: #0A2B53;
+}
+
+.help-big {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-bottom: 32px;
+}
+
+.help {
+    height: 45px;
+    width: 220px;
+    background-color: #FAA61A;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.live-session span {
+    color: #0A2B53;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.live-session {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #DFF0FF;
+    margin: 50px 20px 0px 20px;
+    padding: 20px;
+}
+
+.box2 {
+    background-color: #DFF0FF;
+    margin: 5px 20px 0px 20px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.box3 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 40px;
+    margin-bottom: 30px;
+}
+
+.box3 img {
+    height: 180px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.box3 span {
+    font-size: 22px;
+    font-weight: 500;    
+    color: #0A2B53;
+}
+
+.box4 {
+    background-color: #C4E4FF;
+    width: 485px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.box4 span {
+    margin-left: 60px;
+    color: #0A2B53;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.reminder {
+    border: none;
+    background-color: #2EA0FF;
+    color: #fff;
+    padding: 16px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+    cursor: pointer;
+}
+
+.reminder img {
+    height: 22px;
+    margin: 0px 10px;  
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 40px 0px 40px;
+}
+
+.product1 {
+    color: #0A2B53;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.product2{
+    font-size: 20px;
+    font-weight: 500;    
+    color: #0A2B53;
+    margin: 25px 0px;
+}
+
+.product2 a {
+    font-size: 20px;
+    color: #30A9FC;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.product img {
+    margin-top: 10px;
+}
+
+.hodling {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 40px 0px 40px;
+}
+
+.button5 {
+    width: 810px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.tw-button {
+    border: none;
+    background-color: #2EA0FF;
+    color: #fff;
+    padding: 10px 20px 10px 20px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    margin-left: 22px;
+    cursor: pointer;
+}
+
+.tw-button img {
+    height: 15px;
+    margin-right: 8px;
+}
+
+.crypto {
+    width: 810px;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.crypto img {
+    width: 730px;
+}

@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.box {
+    height: 105px;
+    width: 105px;
+    background-color: red;
+}
+
+.boxes {
+    -webkit-animation-name: animation;
+    -webkit-animation-duration: 10s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-play-state: running;
+    animation-name: animation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes animation {
+    0.00% { background-color: red;    }
+   16.67% { background-color: orange; }
+   33.33% { background-color: yellow; }
+   50.00% { background-color: green;  }
+   66.67% { background-color: blue;   }
+   83.33% { background-color: indigo; }
+  100.00% { background-color: violet; }
+}

@@ -1,0 +1,29 @@
+.box {width: 170px;
+height: 800px;
+padding: 0px;
+padding-left: 20px;
+border-right: 1px #A7D7F9 solid;
+margin: 0;}
+
+.box img {height: 160px;
+margin: 0;}
+
+a {
+text-decoration: none;
+font-size: 14px;}
+
+.qwerty {color: grey;
+font-size: 14px;}
+
+hr{
+    height: 1px;
+    background-color: #CDCDCD;
+    border: none;
+    margin-top: 0;
+}
+
+span{color: #0645AD;
+}
+
+
+

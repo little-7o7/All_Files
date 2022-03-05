@@ -1,0 +1,38 @@
+/* TT Norms Medium */
+@font-face { 
+    font-family: 'TT Norms Medium';
+    src: url('./TT Norms Medium/TT Norms Medium.eot');
+    src: url('./TT Norms Medium/TT Norms Medium.eot?#iefix') format('embedded-opentype'),
+         url('./TT Norms Medium/TT Norms Medium.woff2') format('woff2'),
+         url('./TT Norms Medium/TT Norms Medium.woff') format('woff'),
+         url('./TT Norms Medium/TT Norms Medium.ttf')  format('truetype'),
+         url('./TT Norms Medium/TT Norms Medium.svg') format('svg');
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+/* TT Norms Bold */
+@font-face { 
+    font-family: 'TT Norms Bold';
+    src: url('./TT Norms Bold/TT Norms Bold.eot');
+    src: url('./TT Norms Bold/TT Norms Bold.eot?#iefix') format('embedded-opentype'),
+         url('./TT Norms Bold/TT Norms Bold.woff2') format('woff2'),
+         url('./TT Norms Bold/TT Norms Bold.woff') format('woff'),
+         url('./TT Norms Bold/TT Norms Bold.ttf')  format('truetype'),
+         url('./TT Norms Bold/TT Norms Bold.svg') format('svg');
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+/* TT Norms Regular */
+@font-face { 
+    font-family: 'TT Norms Regular';
+    src: url('./TT Norms Regular/TT Norms Regular.eot');
+    src: url('./TT Norms Regular/TT Norms Regular.eot?#iefix') format('embedded-opentype'),
+         url('./TT Norms Regular/TT Norms Regular.woff2') format('woff2'),
+         url('./TT Norms Regular/TT Norms Regular.woff') format('woff'),
+         url('./TT Norms Regular/TT Norms Regular.ttf')  format('truetype'),
+         url('./TT Norms Regular/TT Norms Regular.svg') format('svg');
+    font-weight: normal; 
+    font-style: normal; 
+}
