@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button {
+    height: 50px;
+    width: 150px;
+    border-radius: 15px;
+}
+
+body {
+    background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(5423deg,#8116e6bd, #0a311e);
+}
+
+.modals {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: -1920px;
+}
+
+.modal1 {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #000000a4;
+    transition: cubic-bezier(0.4, 0, 1, 1) 1.5s;
+}
+
+.answer {
+    height: 450px;
+    width: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 25px;
+    position: absolute;
+    top: 0;
+    left: 610px;
+    transition: cubic-bezier(.6, 0, 1, 1) 2s;
+}
