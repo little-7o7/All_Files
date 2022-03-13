@@ -46,7 +46,7 @@ const funk = (a) => {
                 item.classList.add('none')
             }
             //тут унас математика я в ней хорошо не разбераюсь так-что скипаем 
-            num2 = pngs.length - 1
+            num2 = pngs.length
             num = pngs.length
             //тут нахождение элемента и удаление его клааса еслми кто нибудь не понял 
             pngs[num2].classList.remove('none')
