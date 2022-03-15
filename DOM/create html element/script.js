@@ -269,6 +269,76 @@ let arr = [
     },
 ];
 
+let arr2 = [
+    {
+        id: 1,
+        title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+        price: 109.95,
+        description:
+            "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+        category: "men's clothing",
+        image: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+        rating: {
+            rate: 3.9,
+            count: 120,
+        },
+    },
+    {
+        id: 2,
+        title: "Mens Casual Premium Slim Fit T-Shirts ",
+        price: 22.3,
+        description:
+            "Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+        category: "men's clothing",
+        image:
+            "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg",
+        rating: {
+            rate: 4.1,
+            count: 259,
+        },
+    },
+    {
+        id: 3,
+        title: "Mens Cotton Jacket",
+        price: 55.99,
+        description:
+            "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+        category: "men's clothing",
+        image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+        rating: {
+            rate: 4.7,
+            count: 500,
+        },
+    },
+    {
+        id: 4,
+        title: "Mens Casual Slim Fit",
+        price: 15.99,
+        description:
+            "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+        category: "men's clothing",
+        image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+        rating: {
+            rate: 2.1,
+            count: 430,
+        },
+    },
+    {
+        id: 5,
+        title:
+            "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+        price: 695,
+        description:
+            "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
+        category: "jewelery",
+        image: "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg",
+        rating: {
+            rate: 4.6,
+            count: 400,
+        },
+    }
+]
+
 
 // <div class="conteiner">
 //     <div class="top">
@@ -299,97 +369,209 @@ let arr = [
 //     </div>
 // </div>
 
-let arr2 = []
-console.log(arr2);
+
+let numb = document.querySelector('.innerNumb')
+let number = 0
+
+let button_one = document.querySelector('#button_one')
+let button_two = document.querySelector('#button_two')
 
 
-for (let product of arr) {
-    let items = document.querySelector('.items')
-    let conteiner = document.createElement('div')
-    let top = document.createElement('div')
-    let img = document.createElement('img')
-    let bottom = document.createElement('div')
-    let bottom_top = document.createElement('div')
-    let h2 = document.createElement('h2')
-    let p = document.createElement('p')
-    let rating = document.createElement('div')
-    let button = document.createElement('a')
-    let a_box = document.createElement('div')
-    let a_box_span = document.createElement('span')
-    let rating_item_one = document.createElement('div')
-    let rating_item_one_img = document.createElement('img')
-    let rating_item_one_span = document.createElement('span')
-    let rating_item_two = document.createElement('div')
-    let rating_item_two_img = document.createElement('img')
-    let rating_item_two_span = document.createElement('span')
-    let rating_item_three = document.createElement('div')
-    let rating_item_three_img = document.createElement('img')
-    let rating_item_three_span = document.createElement('span')
+button_one.onclick = () => {
+    for (let product of arr2) {
+        let items = document.querySelector('.items')
+        let conteiner = document.createElement('div')
+        let top = document.createElement('div')
+        let img = document.createElement('img')
+        let bottom = document.createElement('div')
+        let bottom_top = document.createElement('div')
+        let h2 = document.createElement('h2')
+        let p = document.createElement('p')
+        let rating = document.createElement('div')
+        let button = document.createElement('a')
+        let a_box = document.createElement('div')
+        let a_box_span = document.createElement('span')
+        let rating_item_one = document.createElement('div')
+        let rating_item_one_img = document.createElement('img')
+        let rating_item_one_span = document.createElement('span')
+        let rating_item_two = document.createElement('div')
+        let rating_item_two_img = document.createElement('img')
+        let rating_item_two_span = document.createElement('span')
+        let rating_item_three = document.createElement('div')
+        let rating_item_three_img = document.createElement('img')
+        let rating_item_three_span = document.createElement('span')
 
 
-    conteiner.classList.add('conteiner')
-    top.classList.add('top')
-    img.classList.add('top_img')
-    bottom.classList.add('bottom')
-    h2.classList.add('bottom_h2')
-    p.classList.add('bottom_p')
-    rating.classList.add('rating')
-    rating_item_one.classList.add('rating_items')
-    rating_item_two.classList.add('rating_items')
-    rating_item_three.classList.add('rating_items')
-    rating_item_one_img.classList.add('rating_items_img')
-    rating_item_two_img.classList.add('rating_items_img')
-    rating_item_three_img.classList.add('rating_items_img')
-    rating_item_one_span.classList.add('rating_items_span')
-    rating_item_two_span.classList.add('rating_items_span')
-    rating_item_three_span.classList.add('rating_items_span')
-    a_box.classList.add('btn')
-    a_box.classList.add('btn_white')
-    a_box_span.classList.add('a_box_span')
-
-    let taxedPrice = 0
-    if (product.rating.count >= 200) {
-        taxedPrice = product.price / 100 * 120
-    } else {
-        taxedPrice = product.price / 100 * 80
-    }
-
-    img.setAttribute('src', product.image)
-    h2.innerHTML = product.category.toUpperCase()
-    p.innerHTML = product.description
-    rating_item_one_img.setAttribute('src', './Images/dollar.png')
-    rating_item_two_img.setAttribute('src', './Images/star.png')
-    rating_item_three_img.setAttribute('src', './Images/kub.png')
-    rating_item_one_span.innerHTML = taxedPrice.toFixed(2)
-    rating_item_two_span.innerHTML = product.rating.rate
-    rating_item_three_span.innerHTML = product.rating.count
-    button.setAttribute('href', '')
-    a_box_span.innerHTML = 'В избранное'
+        conteiner.classList.add('conteiner')
+        top.classList.add('top')
+        img.classList.add('top_img')
+        bottom.classList.add('bottom')
+        h2.classList.add('bottom_h2')
+        p.classList.add('bottom_p')
+        rating.classList.add('rating')
+        rating_item_one.classList.add('rating_items')
+        rating_item_two.classList.add('rating_items')
+        rating_item_three.classList.add('rating_items')
+        rating_item_one_img.classList.add('rating_items_img')
+        rating_item_two_img.classList.add('rating_items_img')
+        rating_item_three_img.classList.add('rating_items_img')
+        rating_item_one_span.classList.add('rating_items_span')
+        rating_item_two_span.classList.add('rating_items_span')
+        rating_item_three_span.classList.add('rating_items_span')
+        a_box.classList.add('btn')
+        a_box.classList.add('btn_white')
+        a_box_span.classList.add('a_box_span')
 
 
-    items.prepend(conteiner)
-    conteiner.prepend(top, bottom)
-    top.prepend(img)
-    bottom.prepend(bottom_top, button)
-    bottom_top.prepend(h2, p, rating)
-    rating.prepend(rating_item_one, rating_item_two, rating_item_three)
-    rating_item_one.prepend(rating_item_one_img, rating_item_one_span)
-    rating_item_two.prepend(rating_item_two_img, rating_item_two_span)
-    rating_item_three.prepend(rating_item_three_img, rating_item_three_span)
-    button.prepend(a_box)
-    a_box.prepend(a_box_span)
-
-
-    button.onclick = () => {
-        event.preventDefault();
-        if (a_box.classList.contains('btn_white')) {
-            a_box.classList.remove('btn_white')
-            a_box.classList.add('btn_blue')
-            a_box_span.innerHTML = 'Добавлено'
+        let taxedPrice = 0
+        if (product.rating.count >= 200) {
+            taxedPrice = product.price / 100 * 120
         } else {
-            a_box.classList.remove('btn_blue')
-            a_box.classList.add('btn_white')
-            a_box_span.innerHTML = 'В избранное'
+            taxedPrice = product.price / 100 * 80
+        }
+
+
+        img.setAttribute('src', product.image)
+        h2.innerHTML = product.category.toUpperCase()
+        p.innerHTML = product.description
+        rating_item_one_img.setAttribute('src', './Images/dollar.png')
+        rating_item_two_img.setAttribute('src', './Images/star.png')
+        rating_item_three_img.setAttribute('src', './Images/kub.png')
+        rating_item_one_span.innerHTML = taxedPrice.toFixed(2)
+        rating_item_two_span.innerHTML = product.rating.rate
+        rating_item_three_span.innerHTML = product.rating.count
+        button.setAttribute('href', '')
+        a_box_span.innerHTML = 'В избранное'
+
+
+        items.prepend(conteiner)
+        conteiner.prepend(top, bottom)
+        top.prepend(img)
+        bottom.prepend(bottom_top, button)
+        bottom_top.prepend(h2, p, rating)
+        rating.prepend(rating_item_one, rating_item_two, rating_item_three)
+        rating_item_one.prepend(rating_item_one_img, rating_item_one_span)
+        rating_item_two.prepend(rating_item_two_img, rating_item_two_span)
+        rating_item_three.prepend(rating_item_three_img, rating_item_three_span)
+        button.prepend(a_box)
+        a_box.prepend(a_box_span)
+
+
+        button.onclick = () => {
+            event.preventDefault();
+            if (a_box.classList.contains('btn_white')) {
+                a_box.classList.remove('btn_white')
+                a_box.classList.add('btn_blue')
+                a_box_span.innerHTML = 'Добавлено'
+                number++
+                numb.innerHTML = number
+            } else {
+                a_box.classList.remove('btn_blue')
+                a_box.classList.add('btn_white')
+                a_box_span.innerHTML = 'В избранное'
+                number--
+                numb.innerHTML = number
+            }
+        }
+    }
+}
+
+
+button_two.onclick = () => {
+    for (let product of arr) {
+        let items = document.querySelector('.items')
+        let conteiner = document.createElement('div')
+        let top = document.createElement('div')
+        let img = document.createElement('img')
+        let bottom = document.createElement('div')
+        let bottom_top = document.createElement('div')
+        let h2 = document.createElement('h2')
+        let p = document.createElement('p')
+        let rating = document.createElement('div')
+        let button = document.createElement('a')
+        let a_box = document.createElement('div')
+        let a_box_span = document.createElement('span')
+        let rating_item_one = document.createElement('div')
+        let rating_item_one_img = document.createElement('img')
+        let rating_item_one_span = document.createElement('span')
+        let rating_item_two = document.createElement('div')
+        let rating_item_two_img = document.createElement('img')
+        let rating_item_two_span = document.createElement('span')
+        let rating_item_three = document.createElement('div')
+        let rating_item_three_img = document.createElement('img')
+        let rating_item_three_span = document.createElement('span')
+
+
+        conteiner.classList.add('conteiner')
+        top.classList.add('top')
+        img.classList.add('top_img')
+        bottom.classList.add('bottom')
+        h2.classList.add('bottom_h2')
+        p.classList.add('bottom_p')
+        rating.classList.add('rating')
+        rating_item_one.classList.add('rating_items')
+        rating_item_two.classList.add('rating_items')
+        rating_item_three.classList.add('rating_items')
+        rating_item_one_img.classList.add('rating_items_img')
+        rating_item_two_img.classList.add('rating_items_img')
+        rating_item_three_img.classList.add('rating_items_img')
+        rating_item_one_span.classList.add('rating_items_span')
+        rating_item_two_span.classList.add('rating_items_span')
+        rating_item_three_span.classList.add('rating_items_span')
+        a_box.classList.add('btn')
+        a_box.classList.add('btn_white')
+        a_box_span.classList.add('a_box_span')
+
+
+        let taxedPrice = 0
+        if (product.rating.count >= 200) {
+            taxedPrice = product.price / 100 * 120
+        } else {
+            taxedPrice = product.price / 100 * 80
+        }
+
+
+        img.setAttribute('src', product.image)
+        h2.innerHTML = product.category.toUpperCase()
+        p.innerHTML = product.description
+        rating_item_one_img.setAttribute('src', './Images/dollar.png')
+        rating_item_two_img.setAttribute('src', './Images/star.png')
+        rating_item_three_img.setAttribute('src', './Images/kub.png')
+        rating_item_one_span.innerHTML = taxedPrice.toFixed(2)
+        rating_item_two_span.innerHTML = product.rating.rate
+        rating_item_three_span.innerHTML = product.rating.count
+        button.setAttribute('href', '')
+        a_box_span.innerHTML = 'В избранное'
+
+
+        items.prepend(conteiner)
+        conteiner.prepend(top, bottom)
+        top.prepend(img)
+        bottom.prepend(bottom_top, button)
+        bottom_top.prepend(h2, p, rating)
+        rating.prepend(rating_item_one, rating_item_two, rating_item_three)
+        rating_item_one.prepend(rating_item_one_img, rating_item_one_span)
+        rating_item_two.prepend(rating_item_two_img, rating_item_two_span)
+        rating_item_three.prepend(rating_item_three_img, rating_item_three_span)
+        button.prepend(a_box)
+        a_box.prepend(a_box_span)
+
+
+        button.onclick = () => {
+            event.preventDefault();
+            if (a_box.classList.contains('btn_white')) {
+                a_box.classList.remove('btn_white')
+                a_box.classList.add('btn_blue')
+                a_box_span.innerHTML = 'Добавлено'
+                number++
+                numb.innerHTML = number
+            } else {
+                a_box.classList.remove('btn_blue')
+                a_box.classList.add('btn_white')
+                a_box_span.innerHTML = 'В избранное'
+                number--
+                numb.innerHTML = number
+            }
         }
     }
 }
