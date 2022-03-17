@@ -1,0 +1,76 @@
+@import url(//db.onlinewebfonts.com/c/4443b611d51ff971972892a2ade08240?family=Gilroy-Thin);
+@import url(//db.onlinewebfonts.com/c/1064f0ad1cb65fdab43bb592ddd8aa91?family=Gilroy-Bold);
+@import url(//db.onlinewebfonts.com/c/6061c980f1f3f9420e1829c57a44cd23?family=Gilroy);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 30px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: Gilroy-Bold;
+    font-size: 30px;
+}
+
+.inputs-div {
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+}
+
+h5 {
+    font-family: Gilroy-Bold;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.sizes {
+    height: 40px;
+    width: 200px;
+    outline: none;
+    border: 1px solid rgba(128, 128, 128, 0.267);
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.send {
+    width: 110px;
+    background-color: rgb(0, 68, 255);
+    color: #fff;
+    font-size: 14px;
+}
+
+.items {
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: flex-start;
+}
+
+.items div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.items span {
+    color: rgba(128, 128, 128, 0.555);
+    font-family: Gilroy-Bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.items h4 {
+    font-family: Gilroy-Thin;
+    font-weight: 900;
+    font-size: 15px;
+}
