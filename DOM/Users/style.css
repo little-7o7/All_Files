@@ -1,6 +1,28 @@
-@import url(//db.onlinewebfonts.com/c/4443b611d51ff971972892a2ade08240?family=Gilroy-Thin);
-@import url(//db.onlinewebfonts.com/c/1064f0ad1cb65fdab43bb592ddd8aa91?family=Gilroy-Bold);
-@import url(//db.onlinewebfonts.com/c/6061c980f1f3f9420e1829c57a44cd23?family=Gilroy);
+/* Gilroy-Bold */
+@font-face { 
+    font-family: 'Gilroy-Bold';
+    src: url('./fonts/Gilroy-Bold/Gilroy-Bold.eot');
+    src: url('./fonts/Gilroy-Bold/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Gilroy-Bold/Gilroy-Bold.woff2') format('woff2'),
+         url('./fonts/Gilroy-Bold/Gilroy-Bold.woff') format('woff'),
+         url('./fonts/Gilroy-Bold/Gilroy-Bold.ttf')  format('truetype'),
+         url('./fonts/Gilroy-Bold/Gilroy-Bold.svg') format('svg');
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+/* Gilroy-Thin */
+@font-face { 
+    font-family: 'Gilroy-Thin';
+    src: url('./fonts/Gilroy-Thin/Gilroy-Thin.eot');
+    src: url('./fonts/Gilroy-Thin/Gilroy-Thin.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/Gilroy-Thin/Gilroy-Thin.woff2') format('woff2'),
+         url('./fonts/Gilroy-Thin/Gilroy-Thin.woff') format('woff'),
+         url('./fonts/Gilroy-Thin/Gilroy-Thin.ttf')  format('truetype'),
+         url('./fonts/Gilroy-Thin/Gilroy-Thin.svg') format('svg');
+    font-weight: normal; 
+    font-style: normal; 
+}
 
 * {
     margin: 0;
@@ -31,13 +53,13 @@ h5 {
     margin-bottom: 6px;
 }
 
-.sizes {
+.sizes, input {
     height: 40px;
     width: 200px;
     outline: none;
-    border: 1px solid rgba(128, 128, 128, 0.267);
     border-radius: 6px;
     padding: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.267);
 }
 
 .send {
@@ -47,30 +69,182 @@ h5 {
     font-size: 14px;
 }
 
-.items {
-    width: 900px;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    align-items: flex-start;
+.item {
+    color: rgba(0, 0, 0, 0.3);
+    font-family: Gilroy-Bold;
+    font-size: 20px;
 }
 
 .items div {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
 }
 
-.items span {
-    color: rgba(128, 128, 128, 0.555);
-    font-family: Gilroy-Bold;
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-.items h4 {
+table {
+    width: 70%;
     font-family: Gilroy-Thin;
-    font-weight: 900;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+tr, td, th {
+    text-align: left;
+    border-bottom: 1px solid black;
+    height: 30px;
+    padding-left: 10px;
+}
+
+th {
+    font-family: Gilroy-Bold;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+button {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+    padding: 5px;
+}
+
+button img {
+    height: 20px;
+}
+
+.invalid {
+    border: 1px solid red;
+}
+
+.modal_for_check {
+    position: absolute;
+    top: -930px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    transition: .6s ease-in-out;
+}
+
+.back_g_for_check {
+    background: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.window_for_check {
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    top: -930px;
+    left: 750px;
+    width: 450px;
+    height: 360px;
+    background: #0d1117;
+    overflow-y: scroll;
+    margin-top: 41px;
+    border-radius: 6px;
+    border: 1.3px solid #3c3838;
+    transition: .7s ease-in-out;
+}
+
+.top0 {
+    top: 0;
+}
+
+.one_for_check {
+    width: 100%;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #161B22;
+    padding: 16px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.right_for_check button {
+    background-color: transparent;
+    border: none;
+}
+
+.two_for_check {
+    height: 63px;
+    width: 100%;
+    background-color: #272216;
+    border: 1px solid #624711;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 16px;
+}
+
+.three_for_check {
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.three_for_check .text p {
+    margin-bottom: 10px;
+}
+
+.modal_check_form {
+    width: 100%;
+}
+
+.modal_check_form .inp_github, .github_btn {
+    width: 100%;
+    height: 32px;
+    background: transparent;
+    border: 1.3px solid #3c3838;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.modal_check_form .github_btn {
+    margin: 10px 0;
+    font-size: 14px;
+    color: rgba(248,81,73,0.5);
+}
+
+.input_in_focus {
+    border: 1.3px solid #1F6FEB;
+    -webkit-box-shadow: 0px 0px 0px 5px rgba(12, 45, 107, 1);
+    -moz-box-shadow: 0px 0px 0px 5px rgba(12, 45, 107, 1);
+    box-shadow: 0px 0px 0px 5px rgba(12, 45, 107, 1);
+}
+
+.right_for_check .github_btn:hover path {
+    stroke: #58A6FF;
+    fill: #58A6FF;
+    transition: .4s ease-in-out;
+}
+
+.sort {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.sort span {
+    font-family: Gilroy-Bold;
+    font-size: 25px;
+}
+
+.sort button {
+    width: 130px;
+    background-color: rgb(0, 68, 255);
+    color: #fff;
+    font-size: 14px;
+    border-radius: 6px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 15px;
+    padding: 7px;
 }

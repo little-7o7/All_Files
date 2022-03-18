@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,36 +8,64 @@
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
 
     <h1>добавление, изменение и удаление элемента из таблицы</h1>
-    <div class="inputs-div">
+    <form class="inputs-div">
         <div class="input-div">
             <h5>Имя</h5>
-            <input type="name" placeholder="Makhmudkhon Muniskhonov" id="one" class="sizes">
+            <input type="name" placeholder="Makhmudkhon Muniskhonov" id="one" name="name">
         </div>
         <div class="input-div">
             <h5>Возраст</h5>
-            <input type="age" placeholder="16" id="two" class="sizes">
+            <input type="age" placeholder="16" id="two" name="age">
         </div>
         <button class="sizes send">Показать</button>
+    </form>
+    <div class="sort">
+        <span class="sort-text">Сортировать:</span>
+        <button class="with_name_plus">по имени +</button>
+        <button class="with_name_minus">по имени -</button>
+        <button class="with_age_plus">по возрасту +</button>
+        <button class="with_age_minus">по возрасту -</button>
     </div>
+    <table></table>
 
-    <!-- <div class="items">
-        <div class="number">
-            <span>№</span>
+
+    <div class="modal_for_check">
+        <div class="back_g_for_check">
         </div>
-        <div class="name_of_worker">
-            <span>Имя сотрудника</span>
+    </div>
+    <div class="window_for_check">
+        <div class="one_for_check">
+            <div class="left_for_check">
+                <span>Are you absolutely sure?</span>
+            </div>
+            <div class="right_for_check">
+                <button class="close_check_modal">
+                    <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-x">
+                        <path fill-rule="evenodd" stroke="grey" fill="grey" d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z" class="svg"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
-        <div class="year_of_born">
-            <span>Год рождения</span>
+        <div class="two_for_check">
+            <span>Unexpected bad things will happen if you don’t read this!</span>
         </div>
-        <div class="verb">
-            <span>Действие</span>
+        <div class="three_for_check">
+            <div class="text">
+                <p>This action <strong>cannot</strong> be undone. This will permanently delete the <strong class="name_year"></strong> repository, wiki, issues, comments, packages, secrets, workflow runs, and remove all collaborator associations.</p>
+                <p>Please type <strong class="name_year_two"></strong> to confirm.</p>
+                <form action="" id="modal_check_form" class="modal_check_form">
+                    <input type="text" class="inp_github">
+                    <button class="github_btn">I understand the consequences, delete this repository</button>
+                </form>
+            </div>
         </div>
-    </div> -->
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
