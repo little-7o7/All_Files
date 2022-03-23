@@ -31,28 +31,7 @@ inputs.forEach((input) => {
   };
 });
 
-let array = [
-  {
-    id: Math.random,
-    name: 'Muniskhonov Makhmudkhon',
-    age: '16'
-  },
-  {
-    id: Math.random,
-    name: 'Muniskhonov Mamurkhon',
-    age: '13'
-  },
-  {
-    id: Math.random,
-    name: 'Muniskhonova Shakhzodakhon',
-    age: '5'
-  },
-  {
-    id: Math.random,
-    name: 'Azamov Ashrafkhon',
-    age: '17'
-  },
-];
+let array = [];
 
 form.onsubmit = (event) => {
   event.preventDefault();
@@ -203,13 +182,10 @@ function rnmItem(id, name, age) {
     if (inp_git_value == name_age) {
       let find = array.find((item) => item.id === id);
       let idx = array.indexOf(find);
-      let name = prompt("Имя");
-      let age = prompt("Возраст");
+      array.splice(idx, 1);
 
-      array[idx].name = name;
-      array[idx].age = age;
-
-      alert("Изменено");
+      inp_one.value = name
+      inp_two.value = age
 
       modal_for_check.classList.remove("top0");
       window_for_check.classList.remove("top0");
