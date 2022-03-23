@@ -7,6 +7,22 @@ let table = document.querySelector("table");
 let main = document.querySelector("main");
 let table_tr_th = document.querySelector(".table_tr_th");
 
+
+let array = [];
+
+if (localStorage.getItem('array') == null) {
+  setStorage(array)
+}
+
+let text = localStorage.getItem("array");
+array = JSON.parse(text);
+
+
+function setStorage(arr) {
+  let arrayJSON = JSON.stringify(arr)
+  localStorage.setItem("array", arrayJSON);
+}
+
 let patterns = {
   name: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u,
   surname: /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u,
@@ -31,7 +47,6 @@ inputs.forEach((input) => {
   };
 });
 
-let array = [];
 
 form.onsubmit = (event) => {
   event.preventDefault();
@@ -57,6 +72,8 @@ form.onsubmit = (event) => {
 
     array.push(newUser);
   }
+
+  setStorage(array)
 
   reload(array);
 };
@@ -112,7 +129,10 @@ function reload(arr) {
       rnmItem(item.id, item.name, item.age);
     };
   }
+  setStorage(array)
+
 }
+setStorage(array)
 
 reload(array);
 
@@ -205,7 +225,7 @@ let with_age_plus = document.querySelector('.with_age_plus')
 let with_age_minus = document.querySelector('.with_age_minus')
 
 with_name_plus.onclick = () => {
-  function SortArray(x, y){
+  function SortArray(x, y) {
     return x.name.localeCompare(y.name);
   }
 
@@ -216,7 +236,7 @@ with_name_plus.onclick = () => {
 
 
 with_age_plus.onclick = () => {
-  function SortArray(x, y){
+  function SortArray(x, y) {
     return x.age.localeCompare(y.age);
   }
 
@@ -226,7 +246,7 @@ with_age_plus.onclick = () => {
 }
 
 with_name_minus.onclick = () => {
-  function SortArray(y, x){
+  function SortArray(y, x) {
     return x.name.localeCompare(y.name);
   }
 
@@ -237,7 +257,7 @@ with_name_minus.onclick = () => {
 
 
 with_age_minus.onclick = () => {
-  function SortArray(y, x){
+  function SortArray(y, x) {
     return x.age.localeCompare(y.age);
   }
 
