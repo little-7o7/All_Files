@@ -12,15 +12,12 @@
 <body>
 
     <header>
-        <form action="">
-            <input placeholder="Поиск задачи" type="text" name="name" class="form_items">
-            <select name="select" id="" class="form_items">
-                <option value="done">Done todos</option>
-                <option value="not_done">Not done todos</option>
-                <option value="null" selected>All todos</option>
-            </select>
-            <button class="form_items header_button" id="one">Поиск</button>
-        </form>
+        <input placeholder="Поиск задачи" type="text" name="name" class="form_items">
+        <select name="select" id="" class="form_items">
+            <option value="checked">Done todos</option>
+            <option value="unchecked">Not done todos</option>
+            <option value="null" selected>All todos</option>
+        </select>
         <button class="form_items header_button" id="create">Создать задачу</button>
     </header>
 
@@ -34,8 +31,8 @@
                 <input id="one" type="text" name="name" class="modal_items_sizes" placeholder="Задача">
                 <input id="two" type="time" name="date" class="modal_items_sizes">
                 <select name="select" id="" class="modal_items_sizes">
-                    <option value="done">Done!</option>
-                    <option value="not_done">Not done!</option>
+                    <option value="checked">Done!</option>
+                    <option value="unchecked">Not done!</option>
                     <option value="null" selected>Выберите готовность задачи</option>
                 </select>
                 <button class="modal_items_sizes">Создать задачу</button>
@@ -47,23 +44,3 @@
 </body>
 
 </html>
-
-<!-- 
-    <div class="item">
-        <h4>Купит машину</h4>
-        <p>12:21</p>
-        <label class="container">
-            <input type="checkbox">
-            <span class="checkmark"></span>
-        <span>done!</span>
-    </label>
-</div> -->
-
-<!-- <label class="container">Two
-    <input type="checkbox">
-    <span class="checkmark"></span>
-</label>
-<label class="container">Two
-    <input type="checkbox" checked>
-    <span class="checkmark"></span>
-</label> -->

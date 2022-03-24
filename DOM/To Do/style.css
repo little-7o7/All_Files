@@ -151,6 +151,7 @@ header select {
 main {
     margin: 55px 110px 0 110px;
     display: flex;
+    flex-wrap: nowrap;
     gap: 10px;
 }
 
@@ -160,22 +161,39 @@ main {
     background-color: #000000;
 }
 
+.checked, .unchecked {
+    width: 50%;
+    height: 760px;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.checked {
+    padding-left: 16px;
+}
+
 
 
 
 .item {
     position: relative;
-    width: 300px;
+    min-width: 31%;
     height: 145px;
     border-radius: 27px;
     background: #ECECEC;
+    padding-top: 16px;
 }
 
 .item h4 {
     font-weight: 400;
     font-size: 22px;
     line-height: 27px;
-    margin: 16px 0 0 27px;
+    margin: 0px 0 0 27px;
 }
 
 .item p {
