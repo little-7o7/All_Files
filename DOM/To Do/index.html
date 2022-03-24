@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do</title>
+</head>
+
+<body>
+
+    <header>
+        <form action="">
+            <input placeholder="Поиск задачи" type="text" name="name" class="form_items">
+            <select name="select" id="" class="form_items">
+                <option value="done">Done todos</option>
+                <option value="not_done">Not done todos</option>
+                <option value="null" selected>All todos</option>
+            </select>
+            <button class="form_items header_button" id="one">Поиск</button>
+        </form>
+        <button class="form_items header_button" id="create">Создать задачу</button>
+    </header>
+
+    <main></main>
+
+    <div class="modal-screen">
+        <div class="back-g"></div>
+        <div class="modal-center">
+            <form action="" class="modal_form">
+                <h1>Создать задачу</h1>
+                <input id="one" type="text" name="name" class="modal_items_sizes" placeholder="Задача">
+                <input id="two" type="time" name="date" class="modal_items_sizes">
+                <select name="select" id="" class="modal_items_sizes">
+                    <option value="done">Done!</option>
+                    <option value="not_done">Not done!</option>
+                    <option value="null" selected>Выберите готовность задачи</option>
+                </select>
+                <button class="modal_items_sizes">Создать задачу</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!-- 
+    <div class="item">
+        <h4>Купит машину</h4>
+        <p>12:21</p>
+        <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        <span>done!</span>
+    </label>
+</div> -->
+
+<!-- <label class="container">Two
+    <input type="checkbox">
+    <span class="checkmark"></span>
+</label>
+<label class="container">Two
+    <input type="checkbox" checked>
+    <span class="checkmark"></span>
+</label> -->
