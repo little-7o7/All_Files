@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+
+    <div class="body">
+        <header>
+            <div class="top">
+                <div class="left">
+                    <h1>Dashboard</h1>
+                    <button class="add_task" id="add_task_btn">Добавить задачу</button>
+                </div>
+                <div class="right">
+                    <button class="search">Поиск по задачам</button>
+                </div>
+            </div>
+            <div class="bottom">
+                <h4>Показать задачи как:</h4>
+                <span class="table span_onclick" id="table">Таблица</span>
+                <span class="tile" id="tile">Плитка</span>
+            </div>
+        </header>
+
+
+        <main></main>
+
+    </div>
+
+
+
+
+    <!-- <div class="conteiner">
+        <div class="item">
+            <div>
+                <h3>Переписать проект на Vue 3</h3>
+                <p>Quia et suscitecto</p>
+            </div>
+            <div>
+                <div class="time">
+                    <span>21.10.21</span>
+                    <span>14:31</span>
+                </div>
+                <h5 class="progress">Не выполнено</h5>
+            </div>
+        </div>
+    </div> -->
+
+
+
+    <!-- <table>
+        <tr>
+            <th>Заголовок задачи</th>
+            <th>Описание задачи</th>
+            <th>Дата</th>
+            <th>Время</th>
+            <th>Выполнено</th>
+        </tr>
+        <tr>
+            <td>Переписать проект на Vue 3</td>
+            <td>Quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architectos</td>
+            <td>21.10.21</td>
+            <td>14:31</td>
+            <td>Не выполнено</td>
+        </tr>
+    </table> -->
+
+
+    <div class="modal_screens" id="modal_screens">
+
+        <div class="modal_screen_for_create">
+            <div class="back_g"></div>
+            <div class="modal_items_for_create">
+                <h1>Добавить</h1>
+                <form action="" class="form_for_create">
+                    <input type="text" name="title" class="size" placeholder="Заголовок" id="title">
+                    <input type="text" name="description" class="size" placeholder="Описание" id="description">
+                    <input type="time" name="time" class="size" id="time">
+                    <input type="date" name="date" class="size" id="date">
+                    <select name="which_task" class="size" id="select">
+                        <option value="Не выполнено">Не выполнено</option>
+                        <option value="В прогрессе">В прогрессе</option>
+                        <option value="Готово">Готово</option>
+                    </select>
+                    <button class="btn_add size" id="btn_add">Добавить</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- <div class="modal_screen_for_change">
+            <div class="back_g"></div>
+            <div class="modal_items_for_change">
+                <h1>Изменить</h1>
+                <form action="" class="form_for_change">
+                    <input type="text" name="title" class="size" placeholder="Заголовок">
+                    <textarea name="description" class="desc" placeholder="Описание" id="" cols="30"
+                        rows="10"></textarea>
+                    <input type="time" name="time" class="size">
+                    <input type="date" name="date" class="size">
+                    <select name="which_task" id="" class="size">
+                        <option value="new">Не выполнено</option>
+                        <option value="progress">В прогрессе</option>
+                        <option value="done">Готово</option>
+                    </select>
+                    <button class="btn_add size btn">Добавить</button>
+                    <button class="btn_del size btn">Удалить</button>
+                </form>
+            </div>
+        </div> -->
+
+    </div>
+
+    <script src="script.js"></script>
+    <!-- <script src="script2.js"></script> -->
+</body>
+
+</html>

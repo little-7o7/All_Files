@@ -1,12 +1,4 @@
-let todos = [{id: 0.9618167602332441, name: 'Buy car', date: '22:33', select: 'unchecked'},
-{id: 0.522994763998317, name: 'Buy cap', date: '03:42', select: 'checked'},
-{id: 0.9426195483006994, name: 'sdsd', date: '04:43', select: 'checked'},
-{id: 0.7725075016821956, name: 'sdsd23', date: '04:44', select: 'unchecked'},
-{id: 0.17063730457702553, name: '2444', date: '23:23', select: 'checked'},
-{id: 0.7472941348463995, name: '2332', date: '23:44', select: 'checked'},
-{id: 0.09902483272168516, name: '23323423', date: '23:35', select: 'checked'},
-{id: 0.8293529649699218, name: 'asdasd', date: '23:23', select: 'unchecked'},
-{id: 0.37245923039633855, name: 'asdas', date: '23:32', select: 'unchecked'}];
+let todos = [];
 
 if (localStorage.getItem('todos') == null) {
     setStorage(todos)
@@ -116,7 +108,7 @@ function reloadAll(arr) {
                 <h4>${item.name}</h4>
                 <p>${item.date}</p>
                 <label class="container">
-                    <input type="checkbox" ${item.select} id="checkbox">
+                    <input type="checkbox" ${item.select} id="${item.id}" class="checkbox_jor_js">
                     <span class="checkmark"></span>
                     <span style="color: #186605;">Done!</span>
                 </label>
@@ -128,7 +120,7 @@ function reloadAll(arr) {
                 <h4>${item.name}</h4>
                 <p>${item.date}</p>
                 <label class="container">
-                    <input type="checkbox" ${item.select} id="checkbox">
+                    <input type="checkbox" ${item.select} id="${item.id}" class="checkbox_jor_js">
                     <span class="checkmark"></span>
                     <span style="color: #FF0000;">Not done!</span>
                 </label>
@@ -145,7 +137,7 @@ function reloadAll(arr) {
                     <h4>${item.name}</h4>
                     <p>${item.date}</p>
                     <label class="container">
-                        <input type="checkbox" ${item.select} id="checkbox">
+                        <input type="checkbox" ${item.select} id="${item.id}" class="checkbox_jor_js">
                         <span class="checkmark"></span>
                         <span style="color: #186605;">Done!</span>
                     </label>
@@ -159,7 +151,7 @@ function reloadAll(arr) {
                     <h4>${item.name}</h4>
                     <p>${item.date}</p>
                     <label class="container">
-                        <input type="checkbox" ${item.select} id="checkbox">
+                        <input type="checkbox" ${item.select} id="${item.id}" class="checkbox_jor_js">
                         <span class="checkmark"></span>
                         <span style="color: #FF0000;">Not done!</span>
                     </label>
@@ -167,31 +159,34 @@ function reloadAll(arr) {
             }
         }
     }
+    setStorage(todos);
 }
 
 reloadAll(todos)
 
-
-// let checkbs = main.querySelectorAll('#checkbox')
-
-// checkbs.forEach(chckb => {
-//     chckb.onchange = () => {
-//         if (chckb.checked) {
-//             alert('Выбран');
-//         }
-//         else {
-//             alert ('Не выбран');
-//         }
-//     }
-// })
+let checkbs = main.querySelectorAll('.checkbox_jor_js')
 
 
-// let items = main.querySelectorAll('item')
+function changeSelect() {
+    checkbs.forEach(checkb => {
+        checkb.onchange = () => {
+            if (checkb.checked) {
+                let id = checkb.id
+                let find = todos.find(item => item.id == id)
+                let idx = todos.indexOf(find)
+                todos[idx].select = 'checked'
+                reloadAll(todos);
+                setStorage(todos);
+            } else {
+                let id = checkb.id
+                let find = todos.find(item => item.id == id)
+                let idx = todos.indexOf(find)
+                todos[idx].select = 'unchecked'
+                reloadAll(todos);
+                setStorage(todos);
+            }
+        }
+    })
+}
 
-
-// items.forEach(item => {
-//     let checkb = item.querySelector('input')
-// })
-
-
-console.log(todos);
+changeSelect()
