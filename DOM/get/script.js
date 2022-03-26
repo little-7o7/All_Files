@@ -31,27 +31,27 @@ function myFunction(arr) {
         `
     }
 
-let modal = body.querySelector('.modal')
-let back_g = body.querySelector('.back_g')
-let screen = body.querySelector('.screen')
-let items = body.querySelectorAll('.item')
+    let modal = body.querySelector('.modal')
+    let back_g = body.querySelector('.back_g')
+    let screen = body.querySelector('.screen')
+    let items = body.querySelectorAll('.item')
 
-let index
+    let index
 
-items.forEach(item => {
-    item.onclick = () => {
-        modal.style.display = 'flex'
-        index = item.id
-        createObject(index)
+    items.forEach(item => {
+        item.onclick = () => {
+            modal.style.display = 'flex'
+            index = item.id
+            createObject(index)
+        }
+    })
+
+    back_g.onclick = () => {
+        modal.style.display = 'none'
     }
-})
 
-back_g.onclick = () => {
-    modal.style.display = 'none'
-}
-
-function createObject(idx) {
-    screen.innerHTML = `
+    function createObject(idx) {
+        screen.innerHTML = `
         <span>
             {<br>
                 <div class="margin">
@@ -86,6 +86,6 @@ function createObject(idx) {
             }
         </span>
     `
-}
+    }
 
 }
