@@ -15,22 +15,26 @@ let inp = form.querySelector('input')
 
 
 
+
+
 function getComment(arr) {
     let comment = arr[Math.floor(Math.random() * (16 - 0)) + 0];
     console.log(comment);
 
-    comments_div.innerHTML = `
-        <div class="cmt">
-            <div class="left">
-                <span class="sender_username">no_name${comment.id}</span>
-                <p class="sended_comment">${comment.name}</p>
+    function closeComments() {
+        comments_div.innerHTML = `
+            <div class="cmt">
+                <div class="left">
+                    <span class="sender_username">no_name${comment.id}</span>
+                    <p class="sended_comment">${comment.name}</p>
+                </div>
+                <div class="right">
+                    <img class="mini_like" src="./like2.svg" alt="" style="width: 13px; height: 11px; cursor: pointer;">
+                    <span class="mini_likes">7</span>
+                </div>
             </div>
-            <div class="right">
-                <img src="./like2.svg" alt="" style="width: 13px; height: 11px; cursor: pointer;">
-                <span class="mini_likes">7</span>
-            </div>
-        </div>
-    `
+        `
+    }
 
     let array = []
 
@@ -43,6 +47,18 @@ function getComment(arr) {
     comments2.innerHTML = array.length
 
     function showAllComments() {
+        comments_div.innerHTML = `
+            <div class="cmt">
+                <div class="left">
+                    <span class="sender_username">no_name${comment.id}</span>
+                    <p class="sended_comment">${comment.name}</p>
+                </div>
+                <div class="right">
+                    <img src="./like2.svg" alt="" style="width: 13px; height: 11px; cursor: pointer;">
+                    <span class="mini_likes">7</span>
+                </div>
+            </div>
+        `
         for(let comments of array) {
             comments_div.innerHTML += `
             <div class="cmt">
@@ -63,28 +79,41 @@ function getComment(arr) {
 
     show_all_comments.forEach(btn => {
         btn.onclick = () => {
+            showAllComments()
+            inp.style.display = 'block'
         }
     })
-    showAllComments()
 
     form.onsubmit = (event) => {
         event.preventDefault();
 
         let newComment = {
-            id: Math.random(),
+            id: Math.floor(Math.random() * 100),
         };
 
-        if (inp.value > 0) {
-            let fm = new FormData(form);
-            fm.forEach((value, key) => {
-                newComment[key] = value;
-            });
+        let fm = new FormData(form);
+        fm.forEach((value, key) => {
+            newComment[key] = value;
+        });
 
-            array.push(newComment)
-        }
+        array.push(newComment)
+        console.log(array);
 
-        // reloadAll(dashboard)
+        showAllComments()
     };
+
+    let img_like = body.querySelector('.img_like')
+    let span_like = body.querySelector('.span_like')
+
+    let mini_like = body.querySelector('.mini_like')
+    let mini_likes = body.querySelector('.mini_likes')
+
+    img_like.onclick = () => {
+        img_like.src = './like.svg'
+        if (img_like.src === './like2.svg') {
+        }
+    }
+
 
 }
 
