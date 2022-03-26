@@ -1,0 +1,124 @@
+@import url('https://rsms.me/inter/inter.css');
+
+html {
+    font-family: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteiner {
+    width: 646px;
+    margin-top: 25px;
+}
+
+.username {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.username img {
+    border-radius: 100%;
+}
+
+.username span {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.image {
+    margin: 14px 0;
+}
+
+.like_comment {
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    color: #000000;
+}
+
+.like, .comment {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.comments_div {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cmt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.comments_div .left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.comments_div .left span {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 27px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.comments_div .left p {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.64);
+}
+
+.comments_div .right {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #000000;
+}
+
+.show_all_comment {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(0, 0, 0, 0.54);
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+input {
+    background: #E7E7E7;
+    border-radius: 4px;
+    width: 645px;
+    height: 27px;
+    border: none;
+    outline: none;
+    padding: 6px 10px;
+    margin-top: 13px;
+}
