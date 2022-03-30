@@ -1,0 +1,102 @@
+@import './reset.scss';
+@import url(//db.onlinewebfonts.com/c/b9346beb4aa37b086750799d027f6f30?family=Gabriela);
+@import url('https://rsms.me/inter/inter.css');
+@import url(//db.onlinewebfonts.com/c/75e8975966c040d18b299029193d3b1f?family=Abel);
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px 0 25px;
+
+    .left {
+        display: flex;
+        align-items: center;
+
+        .logo,
+        a {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+
+            h1 {
+                font-family: Gabriela;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 141.02%;
+                color: #000000;
+            }
+        }
+
+        .add_btn {
+            width: 134px;
+            height: 44px;
+            background: #1F30C9;
+            border-radius: 9px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 141.02%;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            border: none;
+            margin-left: 39px;
+        }
+
+        .filter-icon {
+            margin: 0 11px 0 19px;
+        }
+
+        .filter-icon:hover path {
+            fill: grey;
+        }
+
+        .search_bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            display: none;
+
+            select {
+                width: 138px;
+                height: 44px;
+                background: #E7E7E7;
+                border-radius: 10px;
+                border: none;
+                text-align: center;
+                font-family: 'Abel';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 141.02%;
+                color: rgba(0, 0, 0, 0.86);
+            }
+
+        }
+        input {
+            width: 189px;
+        }
+    }
+    
+    input {
+        width: 718px;
+        height: 44px;
+        background: #E7E7E7;
+        border-radius: 10px;
+        border: none;
+        font-family: 'Abel';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 141.02%;
+        padding: 0 10px;
+        color: black;
+    }
+
+    input::placeholder {
+        color: rgba(0, 0, 0, 0.45);
+        text-align: center;
+    }
+}

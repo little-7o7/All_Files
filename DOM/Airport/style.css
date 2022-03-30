@@ -1,0 +1,164 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+@import url(//db.onlinewebfonts.com/c/b9346beb4aa37b086750799d027f6f30?family=Gabriela);
+@import url("https://rsms.me/inter/inter.css");
+@import url(//db.onlinewebfonts.com/c/75e8975966c040d18b299029193d3b1f?family=Abel);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px 0 25px;
+}
+header .left {
+  display: flex;
+  align-items: center;
+}
+header .left .logo,
+header .left a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+header .left .logo h1,
+header .left a h1 {
+  font-family: Gabriela;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 141.02%;
+  color: #000000;
+}
+header .left .add_btn {
+  width: 134px;
+  height: 44px;
+  background: #1F30C9;
+  border-radius: 9px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 141.02%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  border: none;
+  margin-left: 39px;
+}
+header .left .filter-icon {
+  margin: 0 11px 0 19px;
+}
+header .left .filter-icon:hover path {
+  fill: grey;
+}
+header .left .search_bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  display: none;
+}
+header .left .search_bar select {
+  width: 138px;
+  height: 44px;
+  background: #E7E7E7;
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 141.02%;
+  color: rgba(0, 0, 0, 0.86);
+}
+header .left input {
+  width: 189px;
+}
+header input {
+  width: 718px;
+  height: 44px;
+  background: #E7E7E7;
+  border-radius: 10px;
+  border: none;
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 141.02%;
+  padding: 0 10px;
+  color: black;
+}
+header input::placeholder {
+  color: rgba(0, 0, 0, 0.45);
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */
