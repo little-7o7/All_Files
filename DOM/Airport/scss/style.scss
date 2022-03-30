@@ -47,6 +47,7 @@ header {
 
         .filter-icon {
             margin: 0 11px 0 19px;
+            cursor: pointer;
         }
 
         .filter-icon:hover path {
@@ -57,7 +58,7 @@ header {
             display: flex;
             align-items: center;
             gap: 8px;
-            display: none;
+            // display: none;
 
             select {
                 width: 138px;
@@ -75,11 +76,17 @@ header {
             }
 
         }
+
         input {
             width: 189px;
+            padding: 0 10px;
+        }
+
+        input::placeholder {
+            text-align: center;
         }
     }
-    
+
     input {
         width: 718px;
         height: 44px;
@@ -91,12 +98,23 @@ header {
         font-weight: 400;
         font-size: 15px;
         line-height: 141.02%;
-        padding: 0 10px;
         color: black;
+        padding: 0 10px 0 60px;
     }
 
     input::placeholder {
         color: rgba(0, 0, 0, 0.45);
-        text-align: center;
     }
+
+    .right {
+        position: relative;
+
+        .search_icon {
+            position: absolute;
+            top: 13px;
+            left: 17px;
+        }
+
+    }
+
 }
