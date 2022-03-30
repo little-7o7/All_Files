@@ -2,7 +2,6 @@
 /* v1.0 | 20080212 */
 @import url(//db.onlinewebfonts.com/c/b9346beb4aa37b086750799d027f6f30?family=Gabriela);
 @import url("https://rsms.me/inter/inter.css");
-@import url(//db.onlinewebfonts.com/c/75e8975966c040d18b299029193d3b1f?family=Abel);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -73,6 +72,11 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: "Abel";
+  src: url("//db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.eot");
+  src: url("//db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.woff") format("woff"), url("//db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.svg#Abel") format("svg");
+}
 header {
   display: flex;
   align-items: center;
@@ -124,6 +128,7 @@ header .left .search_bar {
   display: flex;
   align-items: center;
   gap: 8px;
+  display: none;
 }
 header .left .search_bar select {
   width: 138px;
@@ -132,18 +137,19 @@ header .left .search_bar select {
   border-radius: 10px;
   border: none;
   text-align: center;
-  font-family: "Abel";
+  font-family: Abel;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 141.02%;
   color: rgba(0, 0, 0, 0.86);
 }
-header .left input {
+header .left .search_bar input {
   width: 189px;
   padding: 0 10px;
+  font-size: 15px;
 }
-header .left input::placeholder {
+header .left .search_bar input::placeholder {
   text-align: center;
 }
 header input {
@@ -152,13 +158,13 @@ header input {
   background: #E7E7E7;
   border-radius: 10px;
   border: none;
-  font-family: "Abel";
+  font-family: Abel;
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
   line-height: 141.02%;
   color: black;
   padding: 0 10px 0 60px;
+  font-size: 20px;
 }
 header input::placeholder {
   color: rgba(0, 0, 0, 0.45);
@@ -170,6 +176,126 @@ header .right .search_icon {
   position: absolute;
   top: 13px;
   left: 17px;
+}
+
+main {
+  width: 1751px;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 35px;
+  row-gap: 14px;
+}
+main .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 322px;
+  cursor: pointer;
+}
+main .item .left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+main .item .left img {
+  border-radius: 12px;
+  width: 68px;
+  height: 68px;
+}
+main .item .left .texts {
+  height: 68px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 3px 0;
+}
+main .item .left .texts .name {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 141.02%;
+  color: #000000;
+}
+main .item .left .texts .established {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 141.02%;
+  color: #000000;
+}
+main .item .left .texts .country {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 141.02%;
+  color: rgba(0, 0, 0, 0.6);
+}
+main .item .right {
+  height: 68px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.white_back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+}
+.white_back .change_delete {
+  width: 116px;
+  height: 59px;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(16px);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  position: absolute;
+  top: 80px;
+  left: 388px;
+}
+.white_back .change_delete span {
+  font-family: "Abel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 141.02%;
+  color: rgba(0, 0, 0, 0.71);
+  cursor: pointer;
+}
+
+.blur_modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(200, 200, 200, 0.4);
+  backdrop-filter: blur(25px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.blur_modal .screen {
+  width: 691px;
+  height: 691px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 28px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 57px;
 }
 
 /*# sourceMappingURL=style.css.map */
