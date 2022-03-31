@@ -117,11 +117,11 @@ header .left .add_btn {
   border: none;
   margin-left: 39px;
 }
-header .left .filter-icon {
+header .left .filter_icon {
   margin: 0 11px 0 19px;
   cursor: pointer;
 }
-header .left .filter-icon:hover path {
+header .left .filter_icon:hover path {
   fill: grey;
 }
 header .left .search_bar {
