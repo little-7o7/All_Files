@@ -121,6 +121,12 @@ header .left .filter_icon {
   margin: 0 11px 0 19px;
   cursor: pointer;
 }
+header .left .filter_icon_black {
+  fill: black;
+}
+header .left .filter_icon_white {
+  fill: white;
+}
 header .left .filter_icon:hover path {
   fill: grey;
 }
@@ -188,6 +194,7 @@ main {
   row-gap: 14px;
 }
 main .item {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -210,6 +217,7 @@ main .item .left .texts {
   flex-direction: column;
   justify-content: space-between;
   padding: 3px 0;
+  width: 220px;
 }
 main .item .left .texts .name {
   font-family: "Abel";
@@ -241,33 +249,24 @@ main .item .right {
   align-items: center;
   cursor: pointer;
 }
-
-.white_back {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.3);
-  display: none;
-}
-.white_back .change_delete {
+main .item .change_delete {
   width: 116px;
   height: 59px;
   background: rgba(255, 255, 255, 0.45);
   box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(16px);
   border-radius: 8px;
+  padding: 6px 10px;
+  position: absolute;
+  top: -35px;
+  right: -95px;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: space-between;
-  padding: 6px 10px;
-  position: absolute;
-  top: 80px;
-  left: 388px;
 }
-.white_back .change_delete span {
+main .item .change_delete span {
   font-family: "Abel";
   font-style: normal;
   font-weight: 400;
@@ -275,6 +274,25 @@ main .item .right {
   line-height: 141.02%;
   color: rgba(0, 0, 0, 0.71);
   cursor: pointer;
+}
+main .item .dsp_none2 {
+  display: none;
+}
+
+.white_back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.white_back .close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
 }
 
 .blur_modal {
@@ -288,7 +306,14 @@ main .item .right {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: none;
+}
+.blur_modal .close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
 }
 .blur_modal .screen {
   width: 691px;
@@ -296,6 +321,121 @@ main .item .right {
   background: #FFFFFF;
   box-shadow: 0px 0px 28px 1px rgba(0, 0, 0, 0.25);
   border-radius: 57px;
+  z-index: 100;
+}
+
+.modal_for_create_change_items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 54px 56px 54px;
+}
+.modal_for_create_change_items span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 141.02%;
+  color: #000000;
+  margin-bottom: 28px;
+}
+.modal_for_create_change_items form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 8px;
+  font-family: "Inter";
+  font-style: normal;
+}
+.modal_for_create_change_items form .sizer {
+  height: 55px;
+  border: none;
+  outline: none;
+  border-radius: 11px;
+  background: #E7E5E5;
+  padding: 0 21px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 141.02%;
+}
+.modal_for_create_change_items form button {
+  background: #1F30C9;
+  height: 84px;
+  margin-top: 17px;
+  border: none;
+  border-radius: 11px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 141.02%;
+  color: #FFFFFF;
+}
+
+.modal_for_items_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 30px 54px 56px 54px;
+  height: 615px;
+}
+.modal_for_items_info .top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 25px;
+}
+.modal_for_items_info .top span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 141.02%;
+  margin-right: 165px;
+}
+.modal_for_items_info .top svg {
+  align-content: flex-end;
+}
+.modal_for_items_info .info {
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 141.02%;
+  gap: 10px;
+}
+.modal_for_items_info .info textarea {
+  width: 100%;
+  border: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 20px;
+  line-height: 141.02%;
+  font-weight: bold;
+  resize: none;
+  overflow-y: scroll;
+}
+.modal_for_items_info button {
+  width: 100%;
+  height: 84px;
+  background: #1F30C9;
+  border-radius: 11px;
+  border: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 141.02%;
+  color: #FFFFFF;
+}
+
+.dsp_none {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -8,6 +8,8 @@
     src: url("//db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.woff") format("woff"), url("//db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/75e8975966c040d18b299029193d3b1f.svg#Abel") format("svg");
 }
 
+// sass --watch scss\style.scss style.css
+
 header {
     display: flex;
     align-items: center;
@@ -53,6 +55,14 @@ header {
         .filter_icon {
             margin: 0 11px 0 19px;
             cursor: pointer;
+        }
+
+        .filter_icon_black {
+            fill: black;
+        }
+
+        .filter_icon_white {
+            fill: white;
         }
 
         .filter_icon:hover path {
@@ -136,6 +146,7 @@ main {
     row-gap: 14px;
 
     .item {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -159,6 +170,7 @@ main {
                 flex-direction: column;
                 justify-content: space-between;
                 padding: 3px 0;
+                width: 220px;
 
                 .name {
                     font-family: 'Abel';
@@ -195,9 +207,41 @@ main {
             align-items: center;
             cursor: pointer;
         }
+
+        
+        .change_delete {
+            width: 116px;
+            height: 59px;
+            background: rgba(255, 255, 255, 0.45);
+            box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(16px);
+            border-radius: 8px;
+            padding: 6px 10px;
+            position: absolute;
+            top: -35px;
+            right: -95px;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: space-between;
+            
+            span {
+                font-family: 'Abel';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 141.02%;
+                color: rgba(0, 0, 0, 0.71);
+                cursor: pointer;
+            }
+        }
+
+        .dsp_none2 {
+            display: none;
+        }
     }
 }
-
 
 .white_back {
     position: fixed;
@@ -205,36 +249,18 @@ main {
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.3);
-    display: none;
+    // background: rgba(0, 0, 0, 0.3);
 
-    .change_delete {
-        width: 116px;
-        height: 59px;
-        background: rgba(255, 255, 255, 0.45);
-        box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.25);
-        backdrop-filter: blur(16px);
-        border-radius: 8px;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: space-between;
-        padding: 6px 10px;
+    .close {
         position: absolute;
-        top: 80px;
-        left: 388px;
-
-        span {
-            font-family: 'Abel';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 141.02%;
-            color: rgba(0, 0, 0, 0.71);
-            cursor: pointer;
-        }
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 99;
     }
 }
+
 
 
 .blur_modal {
@@ -248,7 +274,15 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    display: none;
+
+    .close {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 99;
+    }
 
     .screen {
         width: 691px;
@@ -256,5 +290,132 @@ main {
         background: #FFFFFF;
         box-shadow: 0px 0px 28px 1px rgba(0, 0, 0, 0.25);
         border-radius: 57px;
+        z-index: 100;
     }
+}
+
+
+.modal_for_create_change_items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 54px 56px 54px;
+
+    span {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 141.02%;
+        color: #000000;
+        margin-bottom: 28px;
+    }
+
+    form {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 8px;
+        font-family: 'Inter';
+        font-style: normal;
+
+        .sizer {
+            height: 55px;
+            border: none;
+            outline: none;
+            border-radius: 11px;
+            background: #E7E5E5;
+            padding: 0 21px;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 141.02%;
+        }
+
+        button {
+            background: #1F30C9;
+            height: 84px;
+            margin-top: 17px;
+            border: none;
+            border-radius: 11px;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 141.02%;
+            color: #FFFFFF;
+        }
+    }
+}
+
+
+.modal_for_items_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 30px 54px 56px 54px;
+    height: 615px;
+
+    .top {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-bottom: 25px;
+
+        span {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 141.02%;
+            margin-right: 165px;
+        }
+
+        svg {
+            align-content: flex-end;
+        }
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        align-self: start;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 141.02%;
+        gap: 10px;
+
+        textarea {
+            width: 100%;
+            border: none;
+            font-family: 'Inter';
+            font-style: normal;
+            font-size: 20px;
+            line-height: 141.02%;
+            font-weight: bold;
+            resize: none;
+            overflow-y: scroll;
+        }
+    }
+
+    button {
+        width: 100%;
+        height: 84px;
+        background: #1F30C9;
+        border-radius: 11px;
+        border: none;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 141.02%;
+        color: #FFFFFF;
+    }
+}
+
+.dsp_none {
+    display: none;
 }
