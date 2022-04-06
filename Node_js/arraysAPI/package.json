@@ -1,13 +1,13 @@
 {
   "name": "arraysapi",
   "version": "1.0.0",
-  "description": "",
+  "description": "little_7o7",
   "main": "index.js",
   "scripts": {
     "start": "json-server -p 3001 -w db.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "7o7",
   "license": "ISC",
   "dependencies": {
     "json-server": "^0.17.0"
