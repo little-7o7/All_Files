@@ -1,30 +1,36 @@
 let body = document.querySelector('body')
 let conteiner = body.querySelector('.conteiner')
 
+let increaseP = conteiner.querySelector('.increaseP')
+
 let ul = conteiner.querySelector('ul')
 
-function reload() {
-    axios.get(`http://localhost:3001/exam1/`)
-        .then(res => {
-            if (res && res.status === 200) {
-                paintingItems(res.data)
-            }
-        })
-        .catch(error => console.log(error))
+function reload(array) {
+    paintingItems(array)
+    let incNumb = array.filter(item => item.increase)
+    increaseP.innerHTML = incNumb.length
 }
 
 function paintingItems(arr) {
     ul.innerHTML = ''
     for (let user of arr) {
+        let className = 'list-group-item d-flex justify-content-between'
+        if (user.increase) {
+            className += ' increase'
+        }
+        if (user.rise) {
+            className += ' like'
+        }
+        let id = user.id
         ul.innerHTML += `
-            <li class="list-group-item d-flex justify-content-between like">
-                <span class="list-group-item-label"data-toggle="rise">${user.name}</span>
+            <li id="${user.id}" class="${className}">
+                <span id="${user.id}" class="list-group-item-label" data-toggle="rise">${user.name}</span>
                 <input type="text" class="list-group-item-input" value="${user.salary}">
                 <div class="d-flex justify-content-center align-items-center">
-                    <button type="button" class="btn-cookie btn-sm " data-toggle="increase">
+                    <button id="${user.id}" type="button" class="btn-increase btn-cookie btn-sm " data-toggle="increase">
                         <i class="fas fa-cookie"></i>
                     </button>
-                    <button type="button" class="btn-trash btn-sm">
+                    <button id="${user.id}" type="button" class="btn-delete btn-trash btn-sm">
                         <i class="fas fa-trash" data-feather="circle"></i>
                     </button>
                     <i class="fas fa-star"></i>

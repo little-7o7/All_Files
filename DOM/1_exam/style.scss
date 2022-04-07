@@ -9,11 +9,11 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-    
+
     .conteiner {
         margin: 0 auto;
         width: 1000px;
-        
+
         header {
             height: 200px;
             padding: 25px;
@@ -21,7 +21,7 @@ body {
             border-radius: 4px;
             box-shadow: 15px 15px 30px rgb(0 0 0 / 15%);
             color: #fff;
-            
+
             h1 {
                 margin-top: 0;
                 margin-bottom: 0.5rem;
@@ -38,13 +38,13 @@ body {
                 line-height: 1.2;
             }
         }
-        
+
         .search-panel {
             margin-top: 30px;
             padding: 25px;
             background-color: #3d5a80;
             border-radius: 4px;
-            box-shadow: 15px 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.15);
             color: #fff;
 
             .form-control {
@@ -62,7 +62,7 @@ body {
                 -moz-appearance: none;
                 appearance: none;
                 border-radius: 0.25rem;
-                transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+                transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
             }
 
             .btn-group {
@@ -88,7 +88,7 @@ body {
 
             .add-form {
                 margin-top: 20px;
-                
+
                 .form-control {
                     display: block;
                     width: 100%;
@@ -104,7 +104,7 @@ body {
                     -moz-appearance: none;
                     appearance: none;
                     border-radius: 0.25rem;
-                    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+                    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
                 }
 
                 input {
@@ -114,7 +114,7 @@ body {
             }
 
             .d-flex {
-                display: flex!important;
+                display: flex !important;
             }
         }
 
@@ -132,15 +132,15 @@ body {
                 color: #212529;
                 text-decoration: none;
                 background-color: #fff;
-                border: 1px solid rgba(0,0,0,.125);
+                border: 1px solid rgba(0, 0, 0, .125);
             }
 
             .d-flex {
-                display: flex!important;
+                display: flex !important;
             }
 
             .justify-content-between {
-                justify-content: space-between!important;
+                justify-content: space-between !important;
             }
 
             .list-group-item {
@@ -185,11 +185,15 @@ body {
                 outline-color: #32a1ce;
             }
 
-            input[type="text" i] {
+            input[type="text"i] {
                 padding: 1px 2px;
             }
 
-            button, input, optgroup, select, textarea {
+            button,
+            input,
+            optgroup,
+            select,
+            textarea {
                 margin: 0;
                 font-family: inherit;
                 font-size: inherit;
@@ -204,11 +208,11 @@ body {
             }
 
             .justify-content-center {
-                justify-content: center!important;
+                justify-content: center !important;
             }
 
             .align-items-center {
-                align-items: center!important;
+                align-items: center !important;
             }
 
             .btn-sm {
@@ -226,7 +230,10 @@ body {
                 cursor: pointer;
             }
 
-            [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+            [type=button]:not(:disabled),
+            [type=reset]:not(:disabled),
+            [type=submit]:not(:disabled),
+            button:not(:disabled) {
                 cursor: pointer;
             }
 
@@ -251,7 +258,7 @@ body {
             .fas {
                 font-weight: 900;
             }
-            
+
             .fa-star {
                 width: 35px;
                 height: 35px;
@@ -269,6 +276,10 @@ body {
                 transform: translateX(0px);
             }
 
+            .fa-trash {
+                color: red;
+            }
+
             .fa-cookie:before {
                 content: "\f563";
             }
@@ -279,6 +290,16 @@ body {
 
             .fa-star:before {
                 content: "\f005";
+                display: none;
+            }
+
+            .increase span,
+            .increase input {
+                color: #e09f3e;
+            }
+
+            .like .fa-star:before {
+                display: block;
             }
         }
     }

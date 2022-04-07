@@ -168,7 +168,11 @@ body .conteiner .app-list input {
 body .conteiner .app-list input[type=text i] {
   padding: 1px 2px;
 }
-body .conteiner .app-list button, body .conteiner .app-list input, body .conteiner .app-list optgroup, body .conteiner .app-list select, body .conteiner .app-list textarea {
+body .conteiner .app-list button,
+body .conteiner .app-list input,
+body .conteiner .app-list optgroup,
+body .conteiner .app-list select,
+body .conteiner .app-list textarea {
   margin: 0;
   font-family: inherit;
   font-size: inherit;
@@ -199,7 +203,10 @@ body .conteiner .app-list .list-group-item button {
   border: none;
   cursor: pointer;
 }
-body .conteiner .app-list [type=button]:not(:disabled), body .conteiner .app-list [type=reset]:not(:disabled), body .conteiner .app-list [type=submit]:not(:disabled), body .conteiner .app-list button:not(:disabled) {
+body .conteiner .app-list [type=button]:not(:disabled),
+body .conteiner .app-list [type=reset]:not(:disabled),
+body .conteiner .app-list [type=submit]:not(:disabled),
+body .conteiner .app-list button:not(:disabled) {
   cursor: pointer;
 }
 body .conteiner .app-list .list-group-item .btn-cookie {
@@ -235,6 +242,9 @@ body .conteiner .app-list .fa-star {
   opacity: 1;
   transform: translateX(0px);
 }
+body .conteiner .app-list .fa-trash {
+  color: red;
+}
 body .conteiner .app-list .fa-cookie:before {
   content: "\f563";
 }
@@ -243,6 +253,14 @@ body .conteiner .app-list .fa-trash:before {
 }
 body .conteiner .app-list .fa-star:before {
   content: "\f005";
+  display: none;
+}
+body .conteiner .app-list .increase span,
+body .conteiner .app-list .increase input {
+  color: #e09f3e;
+}
+body .conteiner .app-list .like .fa-star:before {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
