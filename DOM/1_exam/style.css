@@ -5,7 +5,7 @@
 }
 
 body {
-  margin: 50px;
+  padding: 50px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -63,59 +63,6 @@ body .conteiner .search-panel .form-control {
 }
 body .conteiner .search-panel .btn-group {
   margin-top: 20px;
-  position: relative;
-  display: inline-flex;
-  vertical-align: middle;
-}
-body .conteiner .search-panel .btn-group .btn {
-  display: inline-block;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-body .conteiner .search-panel .btn-group .btn {
-  padding: 6px 12px;
-}
-body .conteiner .search-panel .btn-group .btn-light {
-  color: #000;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
-}
-body .conteiner .search-panel .btn-group button {
-  cursor: pointer;
-}
-body .conteiner .search-panel .btn-group .btn-group .btn {
-  position: relative;
-  flex: 1 1 auto;
-}
-body .conteiner .search-panel .btn-group .btn-group .btn:not:last-child:not .dropdown-toggle {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-body .conteiner .search-panel .btn-group .btn-group .btn:hover {
-  z-index: 1;
-}
-body .conteiner .search-panel .btn-group .btn-light:hover {
-  color: #000;
-  background-color: #f9fafb;
-  border-color: #f9fafb;
-}
-body .conteiner .search-panel .btn-group .btn-outline-light {
-  color: #f8f9fa;
-  border-color: #f8f9fa;
 }
 body .conteiner .app-add-form {
   margin-top: 30px;
@@ -158,34 +105,6 @@ body .conteiner .app-add-form .add-form input {
 }
 body .conteiner .app-add-form .d-flex {
   display: flex !important;
-}
-body .conteiner .app-add-form .btn {
-  display: inline-block;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  background-color: transparent;
-  border: 1px solid transparent;
-  padding: 0.375rem 0.75rem;
-  font-size: 1rem;
-  border-radius: 0.25rem;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-body .conteiner .app-add-form .btn-outline-light {
-  color: #f8f9fa;
-  border-color: #f8f9fa;
-}
-body .conteiner .app-add-form .btn-outline-light:hover {
-  color: #000;
-  background-color: #f8f9fa;
-  border-color: #f8f9fa;
 }
 body .conteiner .app-list {
   margin-top: 30px;
@@ -237,13 +156,14 @@ body .conteiner .app-list input {
   appearance: auto;
   -webkit-rtl-ordering: logical;
   cursor: text;
-  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+  background-color: -internal-light-dark(white, #3b3b3b);
   margin: 0em;
   padding: 1px 2px;
   border-width: 2px;
   border-style: inset;
-  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-color: -internal-light-dark(#767676, #858585);
   border-image: initial;
+  outline-color: #32a1ce;
 }
 body .conteiner .app-list input[type=text i] {
   padding: 1px 2px;

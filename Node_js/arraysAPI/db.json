@@ -1,26 +1,104 @@
 {
   "users": [],
-  "bank": [
+  "bank": [],
+  "exam1": [
     {
-      "id": "5a1e02d0-0b08-481f-9874-7029217da36f",
-      "email": "munisxonovmaxmudxon@gmail.com",
-      "name": "Makhmudkhon",
-      "surname": "Munisxonov",
-      "password": "Eshonchaoo7"
+      "name": "Сохиб Курбон",
+      "salary": "800$",
+      "increase": false,
+      "rise": true,
+      "id": 1
     },
     {
-      "id": "5a1e02d0-0b08-481f-9874-7029217da36f",
-      "email": "munisxonovmaxmudxon777@gmail.com",
-      "name": "Makhmudkhon",
-      "surname": "Munisxonov",
-      "password": "Eshoncha777"
+      "name": "Шахзод Хамидов",
+      "salary": "3000$",
+      "increase": true,
+      "rise": false,
+      "id": 2
     },
     {
-      "id": "8b4f756f-db02-4b5c-8c1d-905cd6ef383f",
-      "email": "",
-      "name": "",
-      "surname": "",
-      "password": ""
+      "name": "Далер Шарифкулов",
+      "salary": "5000$",
+      "increase": false,
+      "rise": false,
+      "id": 3
+    },
+    {
+      "name": "Бекзод Хамидов",
+      "salary": "5000$",
+      "increase": false,
+      "rise": false,
+      "id": 4
+    },
+    {
+      "name": "Алишер Мардиев",
+      "salary": "5000$",
+      "increase": false,
+      "rise": false,
+      "id": 5
+    },
+    {
+      "name": "Мухаммад",
+      "salary": "5000$",
+      "increase": false,
+      "rise": false,
+      "id": 6
+    },
+    {
+      "name": "Сабина Яковлева",
+      "salary": "5000$",
+      "increase": false,
+      "rise": false,
+      "id": 7
+    },
+    {
+      "name": "Руфина",
+      "salary": "5000$",
+      "increase": false,
+      "rise": false,
+      "id": 8
+    },
+    {
+      "name": "Хуршида",
+      "salary": "5000$",
+      "increase": false,
+      "rise": false,
+      "id": 9
+    },
+    {
+      "name": "Дилшод Муртазоев",
+      "salary": "5000$",
+      "increase": false,
+      "rise": false,
+      "id": 10
+    },
+    {
+      "name": "Ориф",
+      "salary": "5000$",
+      "increase": false,
+      "rise": false,
+      "id": 11
+    },
+    {
+      "name": "Улугбек",
+      "salary": "5000$",
+      "increase": false,
+      "rise": false,
+      "id": 12
+    },
+    {
+      "name": "Влад Цой",
+      "salary": "5000$",
+      "increase": false,
+      "rise": false,
+      "id": 13
+    },
+    {
+      "name": "Алина",
+      "salary": "5000$",
+      "increase": false,
+      "rise": false,
+      "id": 14
     }
   ]
 }
