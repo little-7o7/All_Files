@@ -26,11 +26,22 @@ body {
             line-height: 141.02%;
         }
 
-        .registrationForm, .enterForm {
+        .login_register {
+            color: #5a67df;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login_register:hover {
+            text-decoration: underline
+        }
+
+        .registrationForm,
+        .enterForm {
             @extend %flex_column_a_center;
             gap: 26px;
 
-            .size {
+            input, button {
                 width: 487px;
                 height: 55px;
                 box-shadow: 0px 0px 11px rgba(150, 150, 150, 0.25);
@@ -49,7 +60,7 @@ body {
             input:hover {
                 border: 1px solid rgba(150, 150, 150, 0.25);
             }
-
+            
             input::placeholder {
                 color: rgba(0, 0, 0, 0.26);
             }
@@ -61,6 +72,10 @@ body {
                 line-height: 141.02%;
                 color: #FFFFFF;
                 border: none;
+            }
+
+            .invalid {
+                border: 1px solid rgba(255, 0, 0, 1);
             }
         }
     }

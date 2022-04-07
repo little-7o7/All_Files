@@ -1,4 +1,26 @@
 {
-    "users": [],
-    "bank": []
+  "users": [],
+  "bank": [
+    {
+      "id": "5a1e02d0-0b08-481f-9874-7029217da36f",
+      "email": "munisxonovmaxmudxon@gmail.com",
+      "name": "Makhmudkhon",
+      "surname": "Munisxonov",
+      "password": "Eshonchaoo7"
+    },
+    {
+      "id": "5a1e02d0-0b08-481f-9874-7029217da36f",
+      "email": "munisxonovmaxmudxon777@gmail.com",
+      "name": "Makhmudkhon",
+      "surname": "Munisxonov",
+      "password": "Eshoncha777"
+    },
+    {
+      "id": "8b4f756f-db02-4b5c-8c1d-905cd6ef383f",
+      "email": "",
+      "name": "",
+      "surname": "",
+      "password": ""
+    }
+  ]
 }
