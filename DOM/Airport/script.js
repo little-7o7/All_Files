@@ -1,69 +1,25 @@
-let airways_7o7 = [
-    {
-        id: 1,
-        name: 'Thai Airways',
-        country: 'Thailand',
-        logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/58/Thai_Airways_Logo.svg/200px-Thai_Airways_Logo.svg.png',
-        slogan: 'Smooth as Silk / I Fly THAI',
-        head_quaters: 'Jom Phol Subdistrict, Chatuchak, Bangkok, Thailand',
-        website: 'www.thaiairways.com',
-        established: '1960',
-    },
-    {
-        id: 2,
-        name: 'Swiss International Air Lines',
-        country: 'Switzerland',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Swiss_International_Air_Lines_Logo_2011.svg/200px-Swiss_International_Air_Lines_Logo_2011.svg.png',
-        slogan: 'Made of Switzerland. The Airline of Switzerland',
-        head_quaters: 'EuroAirport Basel Mulhouse Freiburg near Basel, Switzerland',
-        website: 'www.swiss.com',
-        established: '2002',
-    },
-    {
-        id: 3,
-        name: 'Swiss International Air Lines',
-        country: 'Switzerland',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Swiss_International_Air_Lines_Logo_2011.svg/200px-Swiss_International_Air_Lines_Logo_2011.svg.png',
-        slogan: 'Made of Switzerland. The Airline of Switzerland',
-        head_quaters: 'EuroAirport Basel Mulhouse Freiburg near Basel, Switzerland',
-        website: 'www.swiss.com',
-        established: '2002',
-    },
-    {
-        id: 4,
-        name: 'Swiss International Air Lines',
-        country: 'Switzerland',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Swiss_International_Air_Lines_Logo_2011.svg/200px-Swiss_International_Air_Lines_Logo_2011.svg.png',
-        slogan: 'Made of Switzerland. The Airline of Switzerland',
-        head_quaters: 'EuroAirport Basel Mulhouse Freiburg near Basel, Switzerland',
-        website: 'www.swiss.com',
-        established: '2002',
-    },
-    {
-        id: 5,
-        name: 'Swiss International Air Lines',
-        country: 'Switzerland',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Swiss_International_Air_Lines_Logo_2011.svg/200px-Swiss_International_Air_Lines_Logo_2011.svg.png',
-        slogan: 'Made of Switzerland. The Airline of Switzerland',
-        head_quaters: 'EuroAirport Basel Mulhouse Freiburg near Basel, Switzerland',
-        website: 'www.swiss.com',
-        established: '2002',
-    },
-];
+let array = []
 
-
-if (localStorage.getItem('airways_7o7') == null) {
-    setStorage(airways_7o7)
+function getArr(count) {
+    axios.get(`https://api.instantwebtools.net/v1/airlines/${count}/`)
+        .then(res => {
+            if (res && res.status === 200) {
+                myFunction(res)
+            }
+        })
+        .catch(error => console.log(error))
 }
 
-let text = localStorage.getItem("airways_7o7");
-airways_7o7 = JSON.parse(text);
-
-function setStorage(arr) {
-    let airways_7o7JSON = JSON.stringify(arr)
-    localStorage.setItem("airways_7o7", airways_7o7JSON);
-    // console.log(arr);
+for (let i = 0; i <= 105; i++) {
+    getArr(i)
 }
+
+
+function myFunction(item) {
+    array.push(item)
+    console.log('asdfasfd');
+}
+
 
 
 let body = document.querySelector('body')
@@ -85,11 +41,10 @@ let screen = body.querySelector('.screen')
 
 let main = body.querySelector('main')
 
-reloadMain(airways_7o7)
-
 let items = main.querySelectorAll('.item')
 
-let searchedItem = airways_7o7
+
+let searchedItem = array
 
 
 function closeWhiteModal() {
@@ -173,31 +128,9 @@ function itemsFF() {
             white_back.classList.remove('dsp_none')
             change_delete.classList.remove('dsp_none2')
         }
-    
-        let change_span = change_delete.querySelector('.change')
-        let delete_span = change_delete.querySelector('.delete')
-    
-        delete_span.onclick = () => {
-            let idx = item.id
-            removeSplit(idx)
-            itemsFF()
-        }
-        
-        change_span.onclick = () => {
-            let idx = item.id
-            changeItemModal(idx)
-            closeWhiteModal()
-            itemsFF()
-        }
     })
 }
 itemsFF()
-
-function removeSplit(idx) {
-    airways_7o7.splice(idx, 1)
-    setStorage(airways_7o7)
-    reloadMain(airways_7o7)
-}
 
 function changeItemModal(idx) {
     blur_modal.classList.remove('dsp_none')
@@ -217,17 +150,13 @@ function changeItemModal(idx) {
             </form>
         </div>
     `
-    removeSplit(idx)
 }
-
-
 
 search_for_name.onkeyup = () => {
     searchedItem = airways_7o7.filter(item => item.name.includes(search_for_name.value))
     reloadMain(searchedItem)
     console.log(searchedItem);
 }
-
 
 function reloadMain(arr) {
     main.innerHTML = ''
@@ -265,3 +194,4 @@ function reloadMain(arr) {
     }
 }
 
+reloadMain(searchedItem)
