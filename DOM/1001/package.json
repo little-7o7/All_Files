@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^7.0.1",
+    "sass": "^1.50.1"
+  },
+  "name": "1001",
+  "version": "1.0.0",
+  "description": "1001",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "7o7",
+  "license": "ISC"
+}
