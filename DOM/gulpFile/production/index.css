@@ -1,0 +1,1 @@
+:root{--default-shadow:0,0,6px,red}*{padding:0;margin:0;box-sizing:border-box;box-shadow:var(--default-shadow)}a{box-shadow:0,0,6px,red;color:red}a:hover{color:#00f}a:active{color:brown}a:before{content:"";position:absolute}

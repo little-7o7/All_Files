@@ -1,0 +1,1 @@
+header{display:flex;justify-content:space-between;align-items:center}header .side-left{background-color:red}header .side-left a img{width:40px;height:40px}header .side-right{background-color:#00f}header .side-right a{display:flex;align-items:center;margin:12px}

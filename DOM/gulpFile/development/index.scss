@@ -1,0 +1,28 @@
+$default-shadow: 0, 0, 6px, red;
+
+:root {
+    --default-shadow: 0, 0, 6px, red;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    box-shadow: var(--default-shadow);
+}
+
+a {
+    box-shadow: $default-shadow;
+    color: red;
+    &:hover {
+        color: blue;
+    }
+    &:active {
+        color: brown;
+    }
+    &:before {
+        content: "";
+        position: absolute;
+    }
+}
+
