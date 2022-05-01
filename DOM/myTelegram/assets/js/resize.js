@@ -1,7 +1,7 @@
-let size = '480px'
+let size
 
 if (localStorage.getItem('__little_7o7__myTelegram_resize_size') == null) {
-    setStorage(size)
+    setStorage('480px')
 } else {
     size = localStorage.getItem("__little_7o7__myTelegram_resize_size");
 }
