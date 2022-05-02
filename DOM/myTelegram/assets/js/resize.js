@@ -1,21 +1,22 @@
 let size
 
 if (localStorage.getItem('__little_7o7__myTelegram_resize_size') == null) {
-    setStorage('480px')
+    setStorage('480')
 } else {
     size = localStorage.getItem("__little_7o7__myTelegram_resize_size");
 }
 
 function setStorage(px) {
     localStorage.setItem("__little_7o7__myTelegram_resize_size", px);
-    console.log(px);
+    // console.log(px);
 }
 
 let dragging = 0,
     body = document.body,
     target = document.getElementById('dragbar');
 
-body.style.setProperty("--left-width", size);
+let  create_button = document.querySelector("#create_button")
+body.style.setProperty("--left-width", size + 'px');
 
 function clearJSEvents() {
     dragging = 0;
@@ -24,14 +25,13 @@ function clearJSEvents() {
 }
 
 function resize(e) {
-    if (e.pageX > 635 || e.pageX < 200) {
+    if (e.pageX > 635 || e.pageX < 330) {
         return;
     }
     body.style.setProperty("--left-width", e.pageX + 'px');
+    // console.log(create_button);
 
-    console.log(size);
-
-    setStorage(e.pageX + 'px')
+    setStorage(e.pageX)
 }
 
 target.onmousedown = function (e) {
