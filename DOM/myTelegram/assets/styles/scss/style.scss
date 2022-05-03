@@ -109,15 +109,16 @@ body {
                     height: 40px;
                     border-radius: 1.375rem;
                     border: 1px solid transparent;
-                    background-color: transparent;
                     color: rgb(255, 255, 255);
                     font-size: 1rem;
                     line-height: 1.25rem;
                     padding: 6px 41px 7px 43px;
                     transition: .2s ease-in-out;
+                    background-color: rgb(44, 44, 44);
                 }
 
                 input:focus {
+                    background-color: transparent;
                     border-color: #766AC8;
                     outline: 0 none;
                 }
@@ -307,4 +308,59 @@ body {
             }
         }
     }
+
+    // * Modal Modal Modal Modal Modal Modal Modal Modal Modal 
+    // * Modal Modal Modal Modal Modal Modal Modal Modal Modal 
+    .burger_modal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        display: none;
+
+        .back {
+            width: 100%;
+            height: 100%;
+            z-index: 99;
+        }
+
+        .screen {
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            width: 330px;
+            background-color: #686c72;
+            border-radius: 15px;
+            z-index: 100;
+            padding: 15px 12px;
+        }
+    }
+
+    // * Modal Modal Modal Modal Modal Modal Modal Modal Modal 
+    // * Modal Modal Modal Modal Modal Modal Modal Modal Modal 
+
+    // * add_chats_btn_modal add_chats_btn_modal add_chats_btn_modal add_chats_btn_modal
+    // * add_chats_btn_modal add_chats_btn_modal add_chats_btn_modal add_chats_btn_modal
+    .add_chats_btn_modal {
+        height: 65px;
+        width: 65px;
+        position: absolute;
+        left: var(--left-width2);
+        bottom: -100px;
+        background-color: rgb(135, 116, 225);
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .4s ease-out;
+        cursor: pointer;
+
+        svg {
+            fill: white;
+        }
+    }
+
+    // * add_chats_btn_modal add_chats_btn_modal add_chats_btn_modal add_chats_btn_modal
+    // * add_chats_btn_modal add_chats_btn_modal add_chats_btn_modal add_chats_btn_modal
 }

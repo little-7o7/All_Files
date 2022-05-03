@@ -17,6 +17,7 @@ let dragging = 0,
 
 let  create_button = document.querySelector("#create_button")
 body.style.setProperty("--left-width", size + 'px');
+body.style.setProperty("--left-width2", size - 87 + 'px');
 
 function clearJSEvents() {
     dragging = 0;
@@ -25,11 +26,11 @@ function clearJSEvents() {
 }
 
 function resize(e) {
-    if (e.pageX > 635 || e.pageX < 330) {
+    if (e.pageX > 635 || e.pageX < 350) {
         return;
     }
     body.style.setProperty("--left-width", e.pageX + 'px');
-    // console.log(create_button);
+    body.style.setProperty("--left-width2", e.pageX - 87 + 'px');
 
     setStorage(e.pageX)
 }
