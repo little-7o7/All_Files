@@ -309,6 +309,24 @@ body {
         }
     }
 
+
+    .messages_bar {
+        display: flex;
+
+        .left {
+            width: 100%;
+            .info_bar {
+                height: 56px;
+                background-color: rgb(33,33,33);
+                padding: 8px 13px 8px 24px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
+
+
     // * Modal Modal Modal Modal Modal Modal Modal Modal Modal 
     // * Modal Modal Modal Modal Modal Modal Modal Modal Modal 
     .burger_modal {
